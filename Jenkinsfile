@@ -28,6 +28,12 @@ pipeline {
                 sh 'pwd;cd terraform/ ; terraform show -no-color tfplan > tfplan.txt'
             }
         }
+
+         stage('Apply') {
+            steps {
+                sh "pwd;cd terraform/ ; terraform apply -input=false tfplan"
+            }
+        }
     //     stage('Approval') {
     //        when {
     //            not {
@@ -44,11 +50,6 @@ pipeline {
     //        }
     //    }
 
-        stage('Apply') {
-            steps {
-                sh "pwd;cd terraform/ ; terraform apply -input=false tfplan"
-            }
-        }
     }
 
   }
