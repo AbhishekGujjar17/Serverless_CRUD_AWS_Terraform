@@ -125,8 +125,6 @@ resource "aws_lambda_function" "serverless_lambda" {
   handler          = "lambda_function.lambda_handler"
   depends_on       = [aws_iam_role_policy_attachment.cloudWatchLambdaAttach, aws_iam_role_policy_attachment.dynamodbLambdaAttach,]
   runtime          = "python3.9"
-  source_code_hash = filebase64sha256("${path.module}/function/lambda_files.zip")
-
 }
 
 
