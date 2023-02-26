@@ -12,7 +12,7 @@ resource "aws_dynamodb_table" "basic-dynamodb-table" {
   }
 
   tags = {
-    Name        = "Serverless-CRUD-terraform"
+    Name        = "Serverless-CRUD-terraform-project"
     Environment = "prod"
   }
 }
