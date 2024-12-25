@@ -117,7 +117,7 @@ This will create a built for your github code.
 
 ## Questions?
 
-For any query email me at agujjar@mun.ca
+For any query email me at abhishekgujjar.info@gmail.com.
 
 
 
